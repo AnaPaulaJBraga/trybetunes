@@ -44,14 +44,10 @@ class Album extends React.Component {
       <div data-testid="page-album">
         <Header />
 
-        <div data-testid="album-name">
+        <div>
           <img src={ artworkUrl100 } alt={ artistName } />
-          <h2>
-            { collectionName }
-          </h2>
-          <h3 data-testid="artist-name">
-            { artistName }
-          </h3>
+          <h2 data-testid="artist-name">{musics[0].artistName}</h2>
+          <h4 data-testid="album-name">{musics[0].collectionName}</h4>
         </div>
 
         <div>
