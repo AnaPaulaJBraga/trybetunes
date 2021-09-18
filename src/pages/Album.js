@@ -10,7 +10,6 @@ class Album extends React.Component {
     super();
     this.state = {
       musics: [],
-      album: {},
       loading: true,
     };
 
@@ -31,9 +30,7 @@ class Album extends React.Component {
   }
 
   render() {
-    const { musics, album, loading } = this.state;
-    const { artworkUrl100, artistName, collectionName } = album;
-
+    const { musics, loading } = this.state;
     if (loading) {
       return (
         <Loading />
@@ -45,9 +42,11 @@ class Album extends React.Component {
         <Header />
 
         <div>
-          <img src={ artworkUrl100 } alt={ artistName } />
-          <h2 data-testid="artist-name">{ musics[0].artistName }</h2>
-          <h4 data-testid="album-name">{ collectionName }</h4>
+          <section data-testid="album-name">
+            <img src={ musics[0].artworkUrl100 } alt={ musics[0].artistName } />
+            <h2>{ musics[0].collectionName }</h2>
+            <h3 data-testid="artist-name">{ musics[0].artistName }</h3>
+          </section>
         </div>
 
         <div>
