@@ -46,8 +46,8 @@ class Album extends React.Component {
 
         <div>
           <img src={ artworkUrl100 } alt={ artistName } />
-          <h2 data-testid="artist-name">{musics[0].artistName}</h2>
-          <h4 data-testid="album-name">{musics[0].collectionName}</h4>
+          <h2 data-testid="artist-name">{ musics[0].artistName }</h2>
+          <h4 data-testid="album-name">{ collectionName }</h4>
         </div>
 
         <div>
